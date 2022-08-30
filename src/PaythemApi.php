@@ -27,18 +27,6 @@ class PaythemApi extends Controller
     }
 
     /**
-     * Get Vouchers from Paythem
-     *
-     * @param bool $json
-     * @param bool $debug
-     * @return null
-     */
-    public function getVouchers( bool $json = false, bool $debug = false )
-    {
-        return $this->apiCall( 'get_Vouchers', $json, $debug );
-    }
-
-    /**
      * Get Account Balance from Paythem
      *
      * @param bool $json
