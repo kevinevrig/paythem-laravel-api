@@ -1,0 +1,18 @@
+{
+    "name": "paythem/ptn",
+    "description": "Paythem API v2 Laravel Package",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Paythem\\Ptn\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Paythem",
+            "email": "info@paythem.net"
+        }
+    ],
+    "require": {}
+}
