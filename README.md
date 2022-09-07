@@ -11,7 +11,7 @@ Simple Laravel Package for Paythem API v2
 
 Install the package by the following command,
 
-    composer require kevinevrig/ptn
+    composer require paythem/ptn
 
 ### License
 The MIT License (MIT). Please see [License](LICENSE.md) File for more information   
