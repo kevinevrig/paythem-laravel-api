@@ -25,6 +25,8 @@ class PaythemApi extends Controller
         $this->paythem->PRIVATE_KEY = $user_credentials['PRIVATE_KEY'];
         $this->paythem->USERNAME    = $user_credentials['USERNAME'];
         $this->paythem->PASSWORD    = $user_credentials['PASSWORD'];
+
+        if( $this->env == 'production' ) $this->env = '';
         $this->paythem->SERVER_URI  = 'https://vvs'.$this->env.'.paythem.net/API';
 
         $this->apiParameters = array();
