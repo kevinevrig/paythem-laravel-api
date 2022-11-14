@@ -19,6 +19,8 @@ class PaythemApi extends Controller
     {
         $this->env      = $environment;
         $this->appID    = $appID;
+
+        if( $this->env == 'production' ) $this->env = '';
         $this->paythem  = new PTNAPI( $this->env, $this->appID );
 
         $this->paythem->PUBLIC_KEY  = $user_credentials['PUBLIC_KEY'];
@@ -26,7 +28,6 @@ class PaythemApi extends Controller
         $this->paythem->USERNAME    = $user_credentials['USERNAME'];
         $this->paythem->PASSWORD    = $user_credentials['PASSWORD'];
 
-        if( $this->env == 'production' ) $this->env = '';
         $this->paythem->SERVER_URI  = 'https://vvs'.$this->env.'.paythem.net/API';
 
         $this->apiParameters = array();
