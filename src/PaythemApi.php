@@ -11,7 +11,6 @@ class PaythemApi extends Controller
     private string $env;
     private int $appID;
     private string $endpoint;
-
     public array $apiParameters;
     public string $reference_id;
 
@@ -224,5 +223,17 @@ class PaythemApi extends Controller
     public function getProductFormats( bool $json = false, bool $debug = false ): mixed
     {
         return $this->apiCall( 'get_ProductFormats', $json, $debug );
+    }
+
+    /**
+     * Get maximum allowed vouchers
+     *
+     * @param bool $json
+     * @param bool $debug
+     * @return mixed
+     */
+    public function getMaxAllowedVouchersPerCall( bool $json = false, bool $debug = false ): mixed
+    {
+        return $this->apiCall( 'get_MaxAllowedVouchersPerCall', $json, $debug );
     }
 }
